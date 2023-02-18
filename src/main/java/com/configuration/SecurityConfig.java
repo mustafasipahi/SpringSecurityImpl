@@ -22,7 +22,16 @@ public class SecurityConfig {
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity httpSecurity) throws Exception {
 
-        httpSecurity.formLogin();
+        httpSecurity
+            .formLogin()
+            //.loginPage("/login.html")
+            .loginProcessingUrl("/login/register")
+            .defaultSuccessUrl("/homepage.html", true)
+            .failureUrl("/login?error=true")
+            .and()
+            .logout()
+            .logoutUrl("/logout")
+            .deleteCookies("JSESSIONID");
 
         httpSecurity
             .csrf().disable()
