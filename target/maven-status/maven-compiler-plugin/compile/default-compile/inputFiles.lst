@@ -2,6 +2,7 @@
 /Users/mustafasabitsipahi/IdeaProjects/SpringSecurityImpl/src/main/java/com/util/DateUtil.java
 /Users/mustafasabitsipahi/IdeaProjects/SpringSecurityImpl/src/main/java/com/configuration/SecurityConfig.java
 /Users/mustafasabitsipahi/IdeaProjects/SpringSecurityImpl/src/main/java/com/configuration/JwtAuthenticationFilter.java
+/Users/mustafasabitsipahi/IdeaProjects/SpringSecurityImpl/src/main/java/com/controller/DashboardController.java
 /Users/mustafasabitsipahi/IdeaProjects/SpringSecurityImpl/src/main/java/com/service/AuthenticationService.java
 /Users/mustafasabitsipahi/IdeaProjects/SpringSecurityImpl/src/main/java/com/constant/Role.java
 /Users/mustafasabitsipahi/IdeaProjects/SpringSecurityImpl/src/main/java/com/repository/UserRepository.java

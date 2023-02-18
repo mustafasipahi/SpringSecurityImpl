@@ -5,6 +5,7 @@ com/controller/AuthenticationController.class
 com/entity/User.class
 com/service/JwtService.class
 com/repository/UserRepository.class
+com/controller/DashboardController.class
 com/entity/User$UserBuilder.class
 com/dto/UserResponse.class
 com/dto/UserResponse$UserResponseBuilder.class
