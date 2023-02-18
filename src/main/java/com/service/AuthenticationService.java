@@ -1,6 +1,6 @@
 package com.service;
 
-import com.configuration.CustomUserDetail;
+import com.custom.CustomUserDetail;
 import com.constant.Role;
 import com.dto.UserDto;
 import com.dto.UserResponse;

@@ -1,5 +1,6 @@
 package com.configuration;
 
+import com.custom.CustomUserDetail;
 import com.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;

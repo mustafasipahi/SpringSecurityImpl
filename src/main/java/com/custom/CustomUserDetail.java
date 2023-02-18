@@ -1,4 +1,4 @@
-package com.configuration;
+package com.custom;
 
 import com.constant.Role;
 import com.entity.User;
