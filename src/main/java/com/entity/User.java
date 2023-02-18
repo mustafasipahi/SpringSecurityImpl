@@ -13,17 +13,17 @@ import java.util.Date;
 @AllArgsConstructor
 @Builder
 @Entity
-@Table(name = "User")
+@Table(name = "user")
 public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "my_user_name")
+    @Column(name = "user_name")
     private String username;
 
-    @Column(name = "my_password")
+    @Column(name = "password")
     private String password;
 
     @Column(name = "locked")

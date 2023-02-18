@@ -3,6 +3,7 @@ package com.configuration;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.http.HttpMethod;
 import org.springframework.security.authentication.AuthenticationProvider;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
@@ -29,7 +30,7 @@ public class SecurityConfig {
             .and()
             .authenticationProvider(authenticationProvider)
             .addFilterBefore(jwtAuthenticationFilter, UsernamePasswordAuthenticationFilter.class)
-            .authorizeRequests().antMatchers("/login/**").permitAll()
+            .authorizeRequests().antMatchers(HttpMethod.POST, "/login/**").permitAll()
             .anyRequest().authenticated();
 
         return httpSecurity.build();

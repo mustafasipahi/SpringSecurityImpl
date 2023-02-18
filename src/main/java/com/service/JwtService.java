@@ -30,7 +30,7 @@ public class JwtService {
         final Claims claims = Jwts.parserBuilder()
             .setSigningKey(getSecretKey())
             .build()
-            .parseClaimsJwt(token)
+            .parseClaimsJws(token)
             .getBody();
         return claimsTFunction.apply(claims);
     }

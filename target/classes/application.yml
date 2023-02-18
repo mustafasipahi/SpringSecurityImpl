@@ -16,4 +16,4 @@ spring:
         format_sql: true
 
 security:
-  secretKey: mustafasabitsipahi
+  secretKey: mustafasabitsipahimustafasabitsipahimustafasabitsipahi

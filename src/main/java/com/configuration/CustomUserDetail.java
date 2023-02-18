@@ -32,6 +32,9 @@ public class CustomUserDetail implements UserDetails {
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
+        if (role == null) {
+            return Collections.emptyList();
+        }
         return Collections.singletonList(new SimpleGrantedAuthority(role.name()));
     }
 
@@ -47,6 +50,9 @@ public class CustomUserDetail implements UserDetails {
 
     @Override
     public boolean isAccountNonExpired() {
+        if (createDate == null) {
+            return true;
+        }
         final Date now = DateUtil.nowAsDate();
         final Date before = DateUtil.sub(now, Duration.ofDays(180));
         return createDate.compareTo(before) >= 0;
