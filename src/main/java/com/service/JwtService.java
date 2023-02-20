@@ -35,11 +35,6 @@ public class JwtService {
         return claimsTFunction.apply(claims);
     }
 
-    private Key getSecretKey() {
-        byte[] key = Decoders.BASE64.decode(jwtProperties.getSecretKey());
-        return Keys.hmacShaKeyFor(key);
-    }
-
     public boolean checkToken(String jwt, UserDetails userDetails) {
         final String username = findUsername(jwt);
         return username.equals(userDetails.getUsername()) &&
@@ -54,5 +49,10 @@ public class JwtService {
             .setExpiration(DateUtil.add(DateUtil.nowAsDate(), Duration.ofDays(7)))
             .signWith(getSecretKey(), SignatureAlgorithm.HS256)
             .compact();
+    }
+
+    private Key getSecretKey() {
+        byte[] key = Decoders.BASE64.decode(jwtProperties.getSecretKey());
+        return Keys.hmacShaKeyFor(key);
     }
 }
